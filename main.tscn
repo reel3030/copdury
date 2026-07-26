@@ -17,12 +17,12 @@ animations = [{
 
 [node name="main" type="Node2D" unique_id=721923994]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=666126465]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=666126465]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=590979198]
+[node name="Collision" type="CollisionShape2D" parent="Player" unique_id=590979198]
 shape = SubResource("CircleShape2D_7dm0k")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=713142352]
+[node name="Body" type="AnimatedSprite2D" parent="Player" unique_id=713142352]
 sprite_frames = SubResource("SpriteFrames_7dm0k")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=503961853]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=503961853]
