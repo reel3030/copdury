@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cb4pb1vwysn7m"]
 
+[ext_resource type="Script" uid="uid://bx0lglsxsgmam" path="res://scripts/player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cn5qsp66raa0g" path="res://icon.svg" id="1_ig7tw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7dm0k"]
@@ -18,6 +19,7 @@ animations = [{
 [node name="main" type="Node2D" unique_id=721923994]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=666126465]
+script = ExtResource("1_0xm2m")
 
 [node name="Collision" type="CollisionShape2D" parent="Player" unique_id=590979198]
 shape = SubResource("CircleShape2D_7dm0k")
