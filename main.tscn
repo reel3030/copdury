@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bx0lglsxsgmam" path="res://scripts/player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cn5qsp66raa0g" path="res://icon.svg" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dxf14rtkpda3v" path="res://assets/tiles/ground_1.png" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://b3kmjmhrgoqx1" path="res://scripts/chunk_manager.gd" id="4_1bvp3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7dm0k"]
 
@@ -45,3 +46,4 @@ sprite_frames = SubResource("SpriteFrames_7dm0k")
 tile_set = SubResource("TileSet_bm56a")
 
 [node name="ChunkManager" type="Node" parent="." unique_id=1941404429]
+script = ExtResource("4_1bvp3")
