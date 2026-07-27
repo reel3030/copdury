@@ -43,3 +43,5 @@ sprite_frames = SubResource("SpriteFrames_7dm0k")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=125701029]
 tile_set = SubResource("TileSet_bm56a")
+
+[node name="ChunkManager" type="Node" parent="." unique_id=1941404429]
