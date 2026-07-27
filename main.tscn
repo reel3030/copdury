@@ -16,6 +16,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSet" id="TileSet_0xm2m"]
+
 [node name="main" type="Node2D" unique_id=721923994]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=666126465]
@@ -29,4 +31,5 @@ sprite_frames = SubResource("SpriteFrames_7dm0k")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=503961853]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=125701029]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=125701029]
+tile_set = SubResource("TileSet_0xm2m")
