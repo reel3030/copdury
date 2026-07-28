@@ -38,6 +38,7 @@ shape = SubResource("CircleShape2D_7dm0k")
 sprite_frames = SubResource("SpriteFrames_7dm0k")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=503961853]
+enabled = false
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=125701029]
 tile_set = SubResource("TileSet_bm56a")
