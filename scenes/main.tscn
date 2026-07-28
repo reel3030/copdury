@@ -1,14 +1,46 @@
 [gd_scene format=3 uid="uid://cb4pb1vwysn7m"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o5qli"]
+[ext_resource type="Script" uid="uid://bx0lglsxsgmam" path="res://scripts/player.gd" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://cn5qsp66raa0g" path="res://icon.svg" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://dxf14rtkpda3v" path="res://assets/tiles/ground_1.png" id="3_tefeu"]
+[ext_resource type="Script" uid="uid://b3kmjmhrgoqx1" path="res://scripts/chunk_manager.gd" id="4_o6xl0"]
 
-[node name="Main" type="Node2D" unique_id=852871404]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dm0k"]
 
-[node name="Collision" type="CharacterBody2D" parent="." unique_id=263575577]
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dm0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tbgi4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="Collision" type="CollisionShape2D" parent="Collision" unique_id=1678085896]
-shape = SubResource("CircleShape2D_o5qli")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
+texture = ExtResource("3_tefeu")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
 
-[node name="Camera2D" type="Camera2D" parent="Collision" unique_id=1145740103]
+[sub_resource type="TileSet" id="TileSet_bm56a"]
+sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
-[node name="Body" type="AnimatedSprite2D" parent="Collision" unique_id=1453014662]
+[node name="main" type="Node2D" unique_id=721923994]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=666126465]
+script = ExtResource("1_jyhfs")
+
+[node name="Collision" type="CollisionShape2D" parent="Player" unique_id=590979198]
+shape = SubResource("CircleShape2D_7dm0k")
+
+[node name="Body" type="AnimatedSprite2D" parent="Player" unique_id=713142352]
+sprite_frames = SubResource("SpriteFrames_7dm0k")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=503961853]
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=125701029]
+tile_set = SubResource("TileSet_bm56a")
+
+[node name="ChunkManager" type="Node" parent="." unique_id=1941404429]
+script = ExtResource("4_o6xl0")
