@@ -11,10 +11,13 @@ func _ready() -> void:
 	for i in range(source_count):
 		print("SourceID:", ground.tile_set.get_source_id(i))
 	generate_test_map()
-	
-	func generate_test_map() -> void:
-		ground.set_cell(
-			Vector2i(0,0),
-			0,
-			Vector2i(0,0)
-		)
+
+func _process(delta: float) -> void:
+	pass
+
+func generate_test_map() -> void:
+	ground.set_cell(
+		Vector2i(0,0),
+		0,
+		Vector2i(0,0)
+	)
