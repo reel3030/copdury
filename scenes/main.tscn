@@ -38,6 +38,7 @@ script = ExtResource("1_jyhfs")
 shape = SubResource("CircleShape2D_7dm0k")
 
 [node name="Body" type="AnimatedSprite2D" parent="Player" unique_id=713142352]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_7dm0k")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=503961853]
