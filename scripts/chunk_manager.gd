@@ -20,5 +20,8 @@ func generate_test_map() -> void:
 			ground.set_cell(
 				Vector2i(x,y),
 				0,
-				Vector2i(0,0)
+				Vector2i(
+				randi_range(0,1),
+				randi_range(0,1)
+				)
 			)

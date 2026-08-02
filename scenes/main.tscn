@@ -18,13 +18,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("3_tefeu")
-texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:1/0 = 0
+1:0/0 = 0
+1:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_bm56a"]
-sources/0 = SubResource("TileSetAtlasSource_1bvp3")
+[sub_resource type="TileSet" id="TileSet_tefeu"]
+sources/0 = SubResource("TileSetAtlasSource_jyhfs")
 
 [node name="main" type="Node2D" unique_id=721923994]
 
@@ -42,7 +44,7 @@ sprite_frames = SubResource("SpriteFrames_7dm0k")
 zoom = Vector2(5, 5)
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=125701029]
-tile_set = SubResource("TileSet_bm56a")
+tile_set = SubResource("TileSet_tefeu")
 
 [node name="ChunkManager" type="Node" parent="." unique_id=1941404429]
 script = ExtResource("4_o6xl0")
