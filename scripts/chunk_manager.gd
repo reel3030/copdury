@@ -9,14 +9,17 @@ func _ready() -> void:
 	print("Source Count:", source_count)
 	for i in range(source_count):
 		print("SourceID:", ground.tile_set.get_source_id(i))
-	generate_test_map()
+	generate_world()
 
 func _process(delta: float) -> void:
 	pass
 
-func generate_test_map() -> void:
-	for x in range(10):
-		for y in range(10):
+func generate_world() -> void:
+	generate_ground()
+
+func generate_ground() -> void:
+	for x in range(50):
+		for y in range(50):
 			ground.set_cell(
 				Vector2i(x,y),
 				0,
