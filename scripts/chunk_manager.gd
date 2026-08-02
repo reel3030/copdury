@@ -16,15 +16,22 @@ func _process(delta: float) -> void:
 
 func generate_world() -> void:
 	generate_ground()
+	place_spaceship()
 
 func generate_ground() -> void:
+	var ship_area := Rect2i(-1, -1, 3, 3)
+
 	for x in range(50):
 		for y in range(50):
+			if ship_area.has_point(Vector2i(x -25, y -25)):
+				continue
 			ground.set_cell(
-				Vector2i(x,y),
+				Vector2i(x - 25,y - 25),
 				0,
 				Vector2i(
 				randi_range(0,1),
 				randi_range(0,1)
 				)
 			)
+func place_spaceship() -> void:
+	
