@@ -1,6 +1,7 @@
 extends Node
 
 @onready var ground: TileMapLayer = $"../Ground"
+@onready var ship_floor: TileMapLayer = $"../ShipFloor"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("[ChunkManager] ready")
@@ -34,4 +35,12 @@ func generate_ground() -> void:
 				)
 			)
 func place_spaceship() -> void:
+	for x in range(-1, 2):
+		for y in range(-1, 2):
+			ground.set_cell(
+				Vector2i(x, y),
+				0,
+				Vector2i(0, 0)
+				
+			)
 	
