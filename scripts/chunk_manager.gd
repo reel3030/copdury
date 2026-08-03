@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 
 func generate_world() -> void:
 	generate_ground()
+	print("place_spaceship")
 	place_spaceship()
 
 func generate_ground() -> void:
@@ -37,10 +38,10 @@ func generate_ground() -> void:
 func place_spaceship() -> void:
 	for x in range(-1, 2):
 		for y in range(-1, 2):
-			ground.set_cell(
+			ship_floor.set_cell(
 				Vector2i(x, y),
 				0,
-				Vector2i(0, 0)
+				Vector2i(x + 1, y + 1)
 				
 			)
 	
