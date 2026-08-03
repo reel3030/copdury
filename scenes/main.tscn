@@ -42,7 +42,7 @@ texture = ExtResource("5_tbgi4")
 2:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jyhfs"]
-sources/1 = SubResource("TileSetAtlasSource_tbgi4")
+sources/0 = SubResource("TileSetAtlasSource_tbgi4")
 
 [node name="main" type="Node2D" unique_id=721923994]
 
