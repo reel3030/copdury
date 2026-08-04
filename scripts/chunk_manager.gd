@@ -2,6 +2,7 @@ extends Node
 
 @onready var ground: TileMapLayer = $"../Ground"
 @onready var ship_floor: TileMapLayer = $"../ShipFloor"
+@onready var ship_wall: TileMapLayer = $"../ShipWall"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("[ChunkManager] ready")

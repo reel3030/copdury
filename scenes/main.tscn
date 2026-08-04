@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxf14rtkpda3v" path="res://assets/tiles/ground_1.png" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://b3kmjmhrgoqx1" path="res://scripts/chunk_manager.gd" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://djvmgvjmw1ykh" path="res://assets/tiles/spaceship_floor.png" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://g4p1nrfb2dvf" path="res://assets/tiles/spaceship_wall.png" id="6_tefeu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7dm0k"]
 
@@ -44,6 +45,13 @@ texture = ExtResource("5_tbgi4")
 [sub_resource type="TileSet" id="TileSet_jyhfs"]
 sources/0 = SubResource("TileSetAtlasSource_tbgi4")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6xl0"]
+texture = ExtResource("6_tefeu")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tbgi4"]
+sources/0 = SubResource("TileSetAtlasSource_o6xl0")
+
 [node name="main" type="Node2D" unique_id=721923994]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=666126465]
@@ -68,3 +76,6 @@ script = ExtResource("4_o6xl0")
 
 [node name="ShipFloor" type="TileMapLayer" parent="." unique_id=253065542]
 tile_set = SubResource("TileSet_jyhfs")
+
+[node name="ShipWall" type="TileMapLayer" parent="." unique_id=322101486]
+tile_set = SubResource("TileSet_tbgi4")
