@@ -19,7 +19,8 @@ func _process(delta: float) -> void:
 func generate_world() -> void:
 	generate_ground()
 	print("place_spaceship")
-	place_spaceship()
+	place_ship_floor()
+	place_ship_wall()
 
 func generate_ground() -> void:
 	var ship_area := Rect2i(-1, -1, 3, 3)
@@ -36,7 +37,8 @@ func generate_ground() -> void:
 				randi_range(0,1)
 				)
 			)
-func place_spaceship() -> void:
+
+func place_ship_floor() -> void:
 	for x in range(-1, 2):
 		for y in range(-1, 2):
 			ship_floor.set_cell(
@@ -44,5 +46,31 @@ func place_spaceship() -> void:
 				0,
 				Vector2i(x + 1, y + 1)
 				
+			)
+
+func place_ship_wall() -> void:
+	for x in range(-1, 2):
+		ship_wall.set_cell(
+			Vector2i(x, -2),
+			0,
+			Vector2i(0, 0)
+				
+			)
+	for y in range(-1, 2):
+		ship_wall.set_cell(
+			Vector2i(-2, y),
+			0,
+			Vector2i(0, 0)
+		)
+		ship_wall.set_cell(
+			Vector2i(2, y),
+			0,
+			Vector2i(0, 0)
+		)
+	for x in range(-1, 2):
+		ship_wall.set_cell(
+			Vector2i(x, 2,),
+			0,
+			Vector2i(0, 0)
 			)
 	
